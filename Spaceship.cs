@@ -49,7 +49,7 @@ namespace Spaceship
             }
         }
 
-        public String toString()
+        public override String ToString()
         {
             return "Name: " + Name + "\nLasers: " + NumLasers + "\nSize: " + Size + "\nWarpDrive: " + HasWarpDrive;
         }

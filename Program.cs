@@ -29,7 +29,7 @@ namespace Spaceship
               Console.WriteLine($"{item.Name}");
           }
 
-          Console.WriteLine($"{findMostGunsWithSize(spaceships, 5).Name} Has the most lasers");
+          Console.WriteLine($"{findMostGunsWithSize(spaceships, 10).Name} Has the most lasers");
 
 
         }
