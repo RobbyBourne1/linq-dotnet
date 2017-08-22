@@ -11,6 +11,7 @@ namespace Spaceship
         public int Size { get; set; }
         public bool HasWarpDrive { get; set; }
         public String Name { get; set; }
+        static int nameCounter = 0; 
 
         private static String[] names = {"Enterprise", "Voyager", "Wuddship", "Ariel", "Pegasus",
                 "Defiant", "Valiant", "Victory", "Trafalgar", "Shadow"};
@@ -26,12 +27,10 @@ namespace Spaceship
         public Spaceship()
         {
             var r = new Random();
-            var nameCounter = 0;
 
             this.NumLasers = r.Next(0, 20);
             this.Size = r.Next(0, 15);
             this.HasWarpDrive = r.Next(0, 100) % 2 == 0; ;
-
             this.Name = names[nameCounter];
             nameCounter++;
         }
