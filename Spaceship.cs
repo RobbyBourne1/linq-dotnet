@@ -15,6 +15,16 @@ namespace Spaceship
         private static String[] names = {"Enterprise", "Voyager", "Wuddship", "Ariel", "Pegasus",
                 "Defiant", "Valiant", "Victory", "Trafalgar", "Shadow"};
 
+        internal static IEnumerable<object> Where(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static object Where()
+        {
+            throw new NotImplementedException();
+        }
+
         public Spaceship (int numLasers, int size, bool hasWarpDrive, String name) {
             this.NumLasers = numLasers;
             this.Size = size;
@@ -24,12 +34,14 @@ namespace Spaceship
 
         public Spaceship () {
             var r = new Random();
+            var nameCounter = 0;
 
             this.NumLasers = r.Next(0,20);
             this.Size = r.Next(0,15);
             this.HasWarpDrive = r.Next(0,100) % 2 == 0;;
 
-            this.Name = "";
+            this.Name = names[nameCounter];
+            nameCounter++;
         }
 
         public void fightSpaceMonster () {

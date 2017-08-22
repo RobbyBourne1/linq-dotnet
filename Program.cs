@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Spaceship
 {
@@ -11,6 +12,11 @@ namespace Spaceship
         }
 
     public static int sumOfEarthShips (List<Spaceship> ships) {
+        
+        var earthShip = ships.Where(w => w.HasWarpDrive).Select(s => s.Name).Count();
+        Console.WriteLine(new Spaceship());
+        Console.WriteLine(earthShip);
+        
         return -1;
     }
 
